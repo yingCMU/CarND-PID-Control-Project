@@ -7,6 +7,17 @@ class PID {
    * Constructor
    */
   PID();
+  /**
+   * PID Errors
+   */
+  double p_error;
+  double i_error;
+  double d_error;
+
+  /**
+   * PID Coefficients
+   */
+
 
   /**
    * Destructor.
@@ -23,6 +34,9 @@ class PID {
    * Update the PID error variables given cross track error.
    * @param cte The current cross track error
    */
+  double Twiddle(double cte);
+
+  double CalculateValue();
   void UpdateError(double cte);
 
   /**
@@ -32,19 +46,11 @@ class PID {
   double TotalError();
 
  private:
-  /**
-   * PID Errors
-   */
-  double p_error;
-  double i_error;
-  double d_error;
+   double Kp;
+   double Ki;
+   double Kd;
+   double total_error = 0;
 
-  /**
-   * PID Coefficients
-   */ 
-  double Kp;
-  double Ki;
-  double Kd;
 };
 
 #endif  // PID_H
