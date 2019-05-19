@@ -1,5 +1,6 @@
 # CarND-Controls-PID
-Self-Driving Car Engineer Nanodegree Program
+## Description
+Project in Self-Driving Car Engineer Nanodegree Program to implement a PID controller in C++ to maneuver the vehicle around the track in udacity simulator.
 
 ---
 
